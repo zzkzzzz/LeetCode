@@ -1,9 +1,10 @@
-/*Notes
-This answer use js built in array functions, like pop() ang shift()
-However, dequeue uses Array.shift() which time complexity is a O(n)
-Can refer to the notes.md
-We can actully use two pointers (front and rear) to make the time complexity to O(1)
-*/
+/**
+ * Notes
+ * This answer use js built in array functions, like pop() ang shift()
+ * However, dequeue uses Array.shift() which time complexity is a O(n)
+ * Can refer to the notes.md
+ * We can actully use two pointers (front and rear) to make the time complexity to O(1)
+ */
 
 /**
  * Initialize your data structure here. Set the size of the queue to be k.

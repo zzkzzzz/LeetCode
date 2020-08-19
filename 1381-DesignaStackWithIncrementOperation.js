@@ -1,15 +1,13 @@
-/* 
-Notes
+/**
+ * Lazy increment=> use extra array to store increment value
+ * Time Complexity: O(1)
+ * Space Complexity; O(N) =>extra array inc
+ * Busy increment=> loop over list to increment
+ * Time Complexity: O(N)
+ * Space Complexity; O(1) it does not require extra space
+ *
+ */
 
-Lazy increment=> use extra array to store increment value
-Time Complexity: O(1)
-Space Complexity; O(N) =>extra array inc
-
-Busy increment=> loop over list to increment
-Time Complexity: O(N)
-Space Complexity; O(1) it does not require extra space
-
-*/
 /**
  * @param {number} maxSize
  */

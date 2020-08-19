@@ -1,7 +1,7 @@
-/* Notes
-implement hashset by using linkedList
-To handle collision, use linked list to do seperate chaining
-*/
+/**
+ * implement hashset by using linkedList
+ * To handle collision, use linked list to do seperate chaining
+ */
 class Node {
   constructor(key) {
     this.key = key;

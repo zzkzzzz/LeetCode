@@ -1,12 +1,12 @@
-/* Notes
-use two stack , one for all the inputs.
-move all the elements from the this stack to the other one.
-It will reverse the order to implement the queue
-
-The loop in peek does the moving from input to output stack. 
-Each element only ever gets moved like that once, though, and only after we already spent time pushing it, 
-so the overall amortized cost for each operation is O(1).
-*/
+/**
+ * use two stack , one for all the inputs.
+ * move all the elements from the this stack to the other one.
+ * It will reverse the order to implement the queue
+ *
+ * The loop in peek does the moving from input to output stack.
+ * Each element only ever gets moved like that once, though, and only after we already spent time pushing it,
+ * so the overall amortized cost for each operation is O(1).
+ */
 
 // Stack class
 class Stack {

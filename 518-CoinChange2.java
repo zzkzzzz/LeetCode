@@ -1,12 +1,13 @@
-/* 
- * subprblems = 
- * the number of ways to change amount a using all but the first kind of coin, plus
- * the number of ways to change amount a - d using all n kinds of coins, where d is the denomination of the first kind of coin.
+/**
+ * subprblems = the number of ways to change amount a using all but the first
+ * kind of coin, plus the number of ways to change amount a - d using all n
+ * kinds of coins, where d is the denomination of the first kind of coin.
  * 
- * button up Tabulation methods is better in this question since all the states wiil be used
+ * button up Tabulation methods is better in this question since all the states
+ * wiil be used
  */
 
-// Memoization methods => top down 
+// Memoization methods => top down
 class Solution518 {
     public int change(int amount, int[] coins) {
         Integer[][] ways = new Integer[coins.length + 1][amount + 1];

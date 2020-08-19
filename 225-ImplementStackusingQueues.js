@@ -1,8 +1,8 @@
 /* Notes
-evrytime after push new element
-loop through the Queue until reach the new element
-dequeue the element then edqueue again
-in the end, it will reverse the queue
+ * evrytime after push new element
+ * loop through the Queue until reach the new element
+ * dequeue the element then edqueue again
+ * in the end, it will reverse the queue
  */
 
 class Queue {

@@ -1,6 +1,7 @@
-/*Notes
- use two pointers (front and rear) to make the time complexity to O(1)
-*/
+/**
+ * Notes
+ * use two pointers (front and rear) to make the time complexity to O(1)
+ */
 
 /**
  * Initialize your data structure here. Set the size of the queue to be k.

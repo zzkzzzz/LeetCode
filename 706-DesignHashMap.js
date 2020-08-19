@@ -1,7 +1,7 @@
-/* Notes
-implement hashmap by using linkedlist
-To handle collision, use linked list to do seperate chaining
-*/
+/**
+ * implement hashmap by using linkedlist
+ * To handle collision, use linked list to do seperate chaining
+ */
 class Node {
   // constructor
   constructor(key, val) {
