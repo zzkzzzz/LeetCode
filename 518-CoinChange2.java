@@ -47,3 +47,17 @@ class Solution518_2 {
         return dp[coins.length][amount];
     }
 }
+
+// Tabulation methods => button up => improved
+class Solution518_2_2 {
+    public int change(int amount, int[] coins) {
+        int[] dp = new int[amount + 1];
+        dp[0] = 1;
+        for (int coin : coins) {
+            for (int i = coin; i <= amount; i++) {
+                dp[i] += dp[i - coin];
+            }
+        }
+        return dp[amount];
+    }
+}
