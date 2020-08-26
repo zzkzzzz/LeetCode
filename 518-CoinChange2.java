@@ -48,7 +48,7 @@ class Solution518_2 {
     }
 }
 
-// Tabulation methods => button up => improved
+// Tabulation methods => button up => improved space complexity
 class Solution518_2_2 {
     public int change(int amount, int[] coins) {
         int[] dp = new int[amount + 1];
