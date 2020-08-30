@@ -97,11 +97,11 @@ class Solution123 {
     // }
     // }
 
-    public int maxProfit(int prices[], int K) {
-        if (K == 0 || prices.length == 0) {
+    public int maxProfit(int prices[], int k) {
+        if (k == 0 || prices.length == 0) {
             return 0;
         }
-        int T[][] = new int[K + 1][prices.length];
+        int T[][] = new int[k + 1][prices.length];
 
         for (int i = 1; i < T.length; i++) {
             int maxDiff = -prices[0];
@@ -111,7 +111,7 @@ class Solution123 {
             }
         }
         printActualSolution(T, prices);
-        return T[K][prices.length - 1];
+        return T[k][prices.length - 1];
     }
 
     /**
