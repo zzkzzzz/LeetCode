@@ -1,3 +1,7 @@
+// subproblem=
+// robbery of current house + loot from houses before the previous
+// Or loot from the previous house robbery and any loot captured before that
+// rob(i) = Math.max( rob(i - 2) + currentHouseValue, rob(i - 1) )
 class Solution198 {
     // Iterative + memo (bottom-up)
     public int rob(int[] nums) {
