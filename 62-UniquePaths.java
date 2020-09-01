@@ -18,7 +18,8 @@ class Solution62 {
         return dp[n - 1][m - 1];
     }
 
-    // dp bottom-up => improved space complexity
+    // optimizated the space complexity
+    // 2 * 1d array
     public int uniquePaths_2(int m, int n) {
         int[] pre = new int[m];
         int[] cur = new int[m];
@@ -34,4 +35,21 @@ class Solution62 {
         }
         return cur[m - 1];
     }
+
+    // optimizated the space complexity
+    // 1d array
+    // actually can only use one 1d array to solve the problem
+    // dp[j] =dp[j] + dp[j - 1];
+    public int uniquePaths_3(int m, int n) {
+        int[] dp = new int[m];
+        dp[0] = 1;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (j > 0)
+                    dp[j] += dp[j - 1];
+            }
+        }
+        return dp[m - 1];
+    }
+
 }
