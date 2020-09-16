@@ -1,7 +1,6 @@
 import java.util.Arrays;
 
 class Solution279 {
-    // actually this question is a 0/1 Knapsack Problem
     // find the least number of perfect square numbers which sum to n
     // which is exactly same as coin change problem (322)
     // find fewest number of coins that you need to make up that amount
