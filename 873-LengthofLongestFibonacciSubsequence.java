@@ -26,7 +26,6 @@ class Solution873 {
         int diff = 0;
         int max = 0;
         for (int i = 0; i < size; i++) {
-            dp[i][i] = 1;
             for (int j = i + 1; j < size; j++) {
                 sum = A[i] + A[j];
                 diff = A[j] - A[i];
