@@ -19,7 +19,7 @@ class Solution1415 {
         if (n == 0 && k == 0)
             return result;
 
-        char c
+        char c;
         if (k != 0) {
             if (k % length != 0)
                 c = left.get(k / length);
