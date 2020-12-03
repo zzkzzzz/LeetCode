@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 class Solution49 {
+    // time complexity O(m*n)
     public List<List<String>> groupAnagrams(String[] strs) {
         if (strs.length == 0)
             return new ArrayList<>();
@@ -20,6 +21,9 @@ class Solution49 {
         return new ArrayList<>(map.values());
     }
 
+    // instead of Arrays.sort()
+    // use char[] as buckets
+    // time complexity O(n)
     public List<List<String>> groupAnagrams2(String[] strs) {
         if (strs.length == 0)
             return new ArrayList<>();
