@@ -1,5 +1,8 @@
 import java.util.List;
 import java.util.LinkedList;
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.ArrayDeque;
 
 class Solution144 {
 
@@ -37,5 +40,23 @@ class Solution144 {
 
         helper(node.left);
         helper(node.right);
+    }
+
+    // Iterative
+    public List<Integer> preorderTraversal2(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        TreeNode p = root;
+        while (!stack.isEmpty() || p != null) {
+            if (p != null) {
+                stack.push(p);
+                list.add(p.val); // Add before going to children
+                p = p.left;
+            } else {
+                TreeNode node = stack.pop();
+                p = node.right;
+            }
+        }
+        return list;
     }
 }
