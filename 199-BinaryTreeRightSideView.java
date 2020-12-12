@@ -49,7 +49,7 @@ class Solution199 {
 
     }
 
-    // ;evel order traversal, and add the last node on every layer.
+    // level order traversal, and add the last node on every layer.
     public List<Integer> rightSideView2(TreeNode root) {
         if (root == null)
             return new ArrayList<>();

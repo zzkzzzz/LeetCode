@@ -56,27 +56,27 @@ class Solution117 {
     }
 
     // cnm
-    // public void connect2(Node root) {
-    // Node tempChild = new Node(0);
+    public void connect2(Node root) {
+        Node tempChild = new Node(0);
 
-    // while (root != null) {
-    // Node currentChild = tempChild;
+        while (root != null) {
+            Node currentChild = tempChild;
 
-    // while (root != null) {
+            while (root != null) {
 
-    // if (root.left != null) {
-    // currentChild.next = root.left;
-    // currentChild = currentChild.next;
-    // }
-    // if (root.right != null) {
-    // currentChild.next = root.right;
-    // currentChild = currentChild.next;
-    // }
-    // root = root.next;
-    // }
+                if (root.left != null) {
+                    currentChild.next = root.left;
+                    currentChild = currentChild.next;
+                }
+                if (root.right != null) {
+                    currentChild.next = root.right;
+                    currentChild = currentChild.next;
+                }
+                root = root.next;
+            }
 
-    // root = tempChild.next;
-    // tempChild.next = null;
-    // }
-    // }
+            root = tempChild.next;
+            tempChild.next = null;
+        }
+    }
 }
