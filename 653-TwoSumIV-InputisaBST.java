@@ -23,11 +23,6 @@ class Solution653 {
     }
 
     public boolean findTarget(TreeNode root, int k) {
-        if (root == null || root.val == k)
-            return false;
-        if (root.val > k)
-            return findTarget(root.left, k);
-
         HashSet<Integer> set = new HashSet<>();
         return dfs(root, set, k);
     }
