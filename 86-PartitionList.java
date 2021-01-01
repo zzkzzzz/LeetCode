@@ -17,6 +17,8 @@ class Solution86 {
         }
     }
 
+    // the basic idea is to maintain two queues, the first one stores all nodes with
+    // val less than x , and the second queue stores all the rest nodes.
     public ListNode partition(ListNode head, int x) {
         ListNode dummy1 = new ListNode(0), dummy2 = new ListNode(0); // dummy heads of the 1st and 2nd queues
         ListNode curr1 = dummy1, curr2 = dummy2; // current tails of the two queues;
