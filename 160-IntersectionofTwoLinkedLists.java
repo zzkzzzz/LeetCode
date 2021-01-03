@@ -1,4 +1,4 @@
-public class Solution160 {
+class Solution160 {
 
     public class ListNode {
         int val;
