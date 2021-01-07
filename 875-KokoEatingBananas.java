@@ -16,6 +16,23 @@ class Solution875 {
         return left;
     }
 
+    // find left boundary
+    public int minEatingSpeed2(int[] piles, int H) {
+        // get max piles value
+        int left = 1;
+        int right = getMax(piles) + 1;
+        while (left < right) {
+            // prevent overflow
+            int mid = left + (right - left) / 2;
+            if (canFinish(piles, mid, H)) {
+                right = mid;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return left;
+    }
+
     // O(n)
     boolean canFinish(int[] piles, int speed, int H) {
         int time = 0;
