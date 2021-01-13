@@ -1,31 +1,31 @@
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
 class Solution {
-
-    // N: [0, N)
-    // B: blacklist
-    // B1: < N
-    // B2: >= N
-    // M: N - B1
     int M;
     Random r;
     Map<Integer, Integer> map;
 
     public Solution(int N, int[] blacklist) {
-        map = new HashMap();
+        map = new HashMap<>();
+        // put all items of blacklist in hashmap
         for (int b : blacklist) // O(B)
             map.put(b, -1);
+
+        // [0,M) are the items we need
+        // [M,N) are blacklist item
         M = N - map.size();
 
-        for (int b : blacklist) { // O(B)
-            if (b < M) { // re-mapping
-                while (map.containsKey(N - 1))
-                    N--;
-                map.put(b, N - 1);
-                N--;
+        // move all blacklist items to [M,N)
+        int last = N - 1;
+        for (int b : blacklist) {
+            // if the item is already between [M,N) then just skip
+            if (b < M) {
+                while (map.containsKey(last))
+                    last--;
+                map.put(b, last);
+                last--;
             }
         }
 
