@@ -7,4 +7,16 @@ class Solution27 {
         }
         return id;
     }
+
+    int removeElement2(int[] nums, int val) {
+        int fast = 0, slow = 0;
+        while (fast < nums.length) {
+            if (nums[fast] != val) {
+                nums[slow] = nums[fast];
+                slow++;
+            }
+            fast++;
+        }
+        return slow;
+    }
 }
